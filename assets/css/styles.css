@@ -1,0 +1,493 @@
+/*GENERALES*/
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif, Helvetica, Arial;
+}
+
+body{
+    background: url(../images/bg.png);
+}
+
+a{
+    color: #01B1EA;
+}
+a:hover{
+    color: #555555;
+}
+.alert_green{
+    color: green;
+}
+.alert_red{
+    color: red;
+}
+table{
+    text-align: center;
+    width: 100% !important;
+    border: 1px solid #555;  
+    margin-bottom: 20px;
+}
+td{
+    border-top: 1px solid #ccc;
+    padding: 2px;
+}
+/*CONTAINER*/
+#container{
+    width: 80%;
+    margin: 0px auto;
+    box-shadow: 0px 0px 10px gray;
+    background: white;
+}
+
+/*HEADER*/
+#header{
+    width: 80%;
+    height: 145px;
+    margin: 0px auto;
+    background: #F0F0F0;
+}
+
+#logo{
+    padding: 20px;
+    margin-left:20px;
+}
+#logo a{
+    float: left;
+    font-size: 53px;
+    letter-spacing: 4px;
+    font-family: 'Open Sans', Helvetica, Arial;
+    text-transform: uppercase;
+    color: #01B1EA;
+    font-weight: bold;
+    text-decoration:none;
+    margin-top: 18px;
+    margin-left: 25px;
+    text-shadow: 0px 2px 1px #222222;
+    transition: all 300ms;
+}
+#logo a:hover{
+    text-shadow: 0px 2px 1px #222222, 0px 4px 4px #01B1EA;
+}
+#logo img{
+    float: left;
+    width: 100px;
+}
+
+/*MENU*/
+#menu {
+    clear: both;
+    background: #222;
+    color: white;
+    height: 55px;
+    border-bottom: 4px solid #01B1EA;
+}
+
+#menu ul {
+    list-style: none;
+    text-decoration: none;
+    margin: 0px auto;
+    margin-left: 25px;
+}
+#menu ul li {
+    line-height: 55px;
+    float: left;
+    border-right: 1px solid #363636;
+}
+#menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding-left: 12px;
+    padding-right: 12px;
+    transition: all 300ms;
+}
+#menu a:first-child {
+    border-left: 1px solid #363636; 
+}
+#menu a:hover{
+    background: #01B1EA;
+}
+
+/*CONTENT*/
+#content{
+    margin: 0px auto;
+    overflow: hidden;
+    background: white;
+}
+#lateral{
+    width: 22%;
+    min-height: 500px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+#lateral .block_aside{
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+    padding: 10px;
+}
+#lateral h3{
+    display: block;
+    color: #222;
+    width: 100%;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #E1E1E1;
+    border-bottom: 2px solid #01B1EA;
+}
+#lateral ul{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#lateral ul li{
+    list-style: square;
+    margin-left: 20px;  
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/*FORMS*/
+.form_container{
+   display: flex;
+   justify-content: space-between;
+}
+.form-column {
+    flex-basis: 48%; 
+}
+.image_column{
+     flex-basis: 48%;
+}
+#uploaded-image{
+    max-width: 100%;
+    height: auto;
+}
+        
+label, input[type="text"],
+input[type="password"],
+input[type="email"], 
+input[type="number"], 
+textarea{
+    display: block;
+    width: 95%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"], 
+input[type="number"], 
+textarea,
+select {
+    border: 1px solid #C9C9C9;
+    box-shadow: 0px 0px 2px #ccc inset;
+    background: white;
+    padding: 2px;
+    color: gray;
+    transition: all 300ms;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus{
+    border: 1px solid #1579b5;
+    color: black;
+}
+
+input[type="button"],
+input[type="submit"],
+button, .button, .button_ver,
+.button_anadir, .button-pedido, 
+.button-delete {
+    display: block;
+    border-radius: 2px;
+    width: auto;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    background: #2979CD;
+    border: 1px solid #11608E;
+    cursor: pointer;
+}
+
+.button_editar{
+    color: white;
+    text-decoration: none;
+}
+.button_eliminar{
+    color: white;
+    background: red;
+    text-decoration: none;
+}
+
+.button_ver{
+    background: #2979cd;
+    color: white !important;
+    text-decoration: none;
+    
+}
+.button_anadir{
+    background: #96ff00;
+    color: white !important;
+    text-decoration: none;
+    width: 125px;
+    border: 2px solid #333;
+}
+.button-small{
+    width: 120px;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+label, input[type="button"],
+input[type="submit"],
+button{
+    display: block;
+    margin-top: 10px;
+}
+/*CENTRAL*/
+#central{
+    width: 72%;
+    min-height: 500px;
+    float: right;
+    border-left: 1px solid #ccc;
+    box-shadow: -5px -1px 5px #ddd;
+    padding: 25px;
+}
+#central h1{
+    font-size: 24px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 20px;
+    padding-top: 0px;
+}
+
+.h1_form{
+  font-size: 40px !important; /* Tamaño de fuente */
+  color: black; /* Color de texto gris plata */
+  text-transform: uppercase; /* Convertir el texto a mayúsculas */
+  letter-spacing: 2px; /* Espaciado entre letras */
+  text-shadow: 
+    2px 2px 3px rgba(0, 0, 0, 0.5), /* Sombra de texto suave */
+    -2px -2px 3px rgba(255, 255, 255, 0.5); /* Sombra de resalte */
+  padding: 10px; /* Espaciado interno */
+  margin: 0; /* Eliminar margen predeterminado */
+}
+
+.carrito-title {
+    font-size: 40px !important; /* Tamaño de fuente */
+    color: #5aa400; /* Color del texto (naranja) */
+    text-align: center; /* Alineación del texto al centro */
+    margin-top: 20px; /* Margen superior para separar del contenido anterior */
+    margin-bottom: 20px; /* Margen inferior para separar del contenido siguiente */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra de texto */
+    font-family: 'Arial', sans-serif; /* Fuente del texto */
+}
+
+/*PRODUCTS*/
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Espacio entre las columnas y filas */
+}
+
+.product {
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.product img {
+    height: 120px;
+    margin-bottom: 10px;
+}
+
+.product h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Asegurarse de que haya un espacio entre las filas */
+.product:nth-child(3n+1) {
+    clear: left;
+}
+
+.img-carrito{
+    height: 80px;
+}
+/*
+.product{
+    width: 30%;
+    border-right: 1px solid #ccc;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+.product img{
+    height: 120px;
+    margin-bottom: 10px;
+}
+.product h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.product p{
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+}
+*/
+
+/*CARRITO*/
+.total-carrito{
+    width: 295px;
+    float: right;
+}
+.total-carrito h3{
+    display: block;
+    float: left;
+    margin-top: 5px;
+}
+.button-pedido{
+    width: 120px;
+    text-align: center;
+    margin-top: 33px;
+    color: white;
+    text-decoration: none;
+    border: 1px solid #333;
+}
+
+/* Estilo para la tabla con la clase "carrito-tabla" */
+table.carrito-tabla {
+  border-collapse: collapse;
+  width: 100%;
+  height: 100px;
+}
+
+/* Estilo para las celdas de la tabla con la clase "carrito-tabla" */
+table.carrito-tabla td,
+table.carrito-tabla th {
+  border: 1px solid #ccc; /* Líneas divisorias de color gris claro */
+  padding: 8px; /* Espaciado interno en las celdas */
+  text-align: left; /* Alineación del texto en las celdas */
+}
+
+/* Estilo para la línea inferior de las celdas de la tabla con la clase "carrito-tabla" */
+table.carrito-tabla td,
+table.carrito-tabla th {
+  border-bottom: 1px solid #000; /* Línea inferior de grosor 2px de color negro */
+}
+
+/* Estilo para las líneas divisorias horizontales entre filas de la tabla con la clase "carrito-tabla" */
+table.carrito-tabla tr {
+  border-bottom: 1px solid #ccc; /* Línea divisoria de grosor 1px de color gris claro */
+}
+
+/* Estilo opcional para resaltar la primera fila (encabezados) de la tabla con la clase "carrito-tabla" */
+table.carrito-tabla th{
+  font-weight: bold; /* Texto en negrita para la primera fila */
+  background-color: #f2f2f2; /* Fondo gris claro para la primera fila */
+}
+
+.delete-carrito {
+    width: 295px;
+    float: left;
+}
+
+.button-delete {
+    margin-top: 33px;
+    display: block;
+    float:left;
+    color: white;
+    width: 100px;
+    text-decoration: none;
+    background: red;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+.button-unidades {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #3498db; /* Color de fondo del botón */
+  border: none;
+  cursor: pointer;
+  margin: 0 8px; /* Espacio entre botones */
+  color: white;
+}
+
+.button-unidades.up::before {
+  content: '\25B2'; /* Código Unicode para el triángulo hacia arriba */
+  font-size: 16px;
+  display: block;
+}
+
+.button-unidades.less::before {
+  content: '\25BC'; /* Código Unicode para el triángulo hacia abajo */
+  font-size: 16px;
+  display: block;
+}
+
+/*PAGINATION*/
+/* Estilos para el contenedor de las páginas */
+.pages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+/* Estilos para los enlaces de las páginas */
+.pages a {
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #333;
+    margin: 0 4px;
+    transition: background-color 0.3s;
+}
+
+/* Estilos para el enlace activo (página actual) */
+.pages a.active {
+    background-color: #01B1EA;
+    color: white;
+}
+
+/* Estilos para el enlace al pasar el cursor por encima */
+.pages a:hover {
+    background-color: #ddd;
+}
+
+
+/*FOOTER*/
+#footer{
+    clear: both;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background: #222222;
+    border-top: 4px solid #01B1EA;
+}
