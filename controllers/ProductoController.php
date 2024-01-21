@@ -130,9 +130,11 @@ class ProductoController{
             $object_product = new Producto();
             $object_product->setId($id);
             $producto = $object_product->getOne();
-            $query_category = $object_product->getAllCategory();
+            $object_product->setCategoria_id($producto->categoria_id);
+            $query_category = $object_product->getOneCategory();
+            
             if($query_category) {
-                $nombre_categoria = $query_category->fetch_object();
+                $nombre_categoria = $query_category;
             } else {$nombre_categoria = false; }
         }
         require_once 'views/producto/ver.php';

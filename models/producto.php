@@ -105,6 +105,30 @@ class Producto{
         return $all_products;
     }
     
+    public function getOneCategory() {
+        $categoriaId = $this->getCategoria_id();
+        
+        if($categoriaId) {
+            $sql = "SELECT c.nombre AS nombre_categoria
+                    FROM productos p
+                    JOIN categorias c ON p.categoria_id = c.id
+                    WHERE p.categoria_id = " . $categoriaId;
+            
+            $query = $this->db->query($sql);
+           
+            if ($query) {
+                $category = $query->fetch_object();
+                return $category;
+            } else {
+                echo "<script>console.log('Categoria no encontrada');</script>";
+                return false;
+            }
+        } else {
+            echo "<script>console.log('Id de categoria no encontrado');</script>";
+            return false;
+        }
+    }
+    
     public function save() { //Metod to save a new product
         $sql = "INSERT INTO productos VALUES(null, '{$this->getCategoria_id()}','{$this->getName()}',"
         . " '{$this->getDescription()}', {$this->getPrice()}, {$this->getStock()}, "
