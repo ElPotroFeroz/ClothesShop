@@ -1,0 +1,1 @@
+I added a new method in the Producto Model to find only the name of the category of one product, I change the method "Ver" in the ProductoController and something in the config for make the conexion of the DB remote
